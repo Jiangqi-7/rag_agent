@@ -17,7 +17,7 @@ l = [
     {
         "name": "九成八",
         "age": 18,
-        "gender": "male"
+        "gender": "female"
     },
     {
         "name": "九成九",
