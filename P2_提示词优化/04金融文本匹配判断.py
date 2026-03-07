@@ -1,20 +1,17 @@
 # -*- coding: UTF-8 -*-
 """
 @Project ：PycharmProjects 
-@File    ：金融文本匹配判断.py
+@File    ：04金融文本匹配判断.py
 @Author  ：九成八
 @Date    ：2026/3/6 23:48 
 """
 from openai import OpenAI
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import get_env
 
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    # base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    base_url="http://localhost:11434/v1"
+    api_key=get_env("OPENAI_API_KEY"),
+    # base_url=get_env("OPENAI_BASE_URL")
+    base_url=get_env("LOCAL_BASE_URL")
 )
 
 examples_data = {
