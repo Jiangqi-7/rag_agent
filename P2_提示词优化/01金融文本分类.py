@@ -1,22 +1,20 @@
 # -*- coding: UTF-8 -*-
 """
 @Project ：PycharmProjects 
-@File    ：金融文本分类.py
+@File    ：01金融文本分类.py
 @Author  ：九成八
 @Date    ：2026/3/5 18:53 
 """
-import os
 
 from openai import OpenAI
-from dotenv import load_dotenv
+from load_env import get_env
 
-load_dotenv()
 
 # 1. 获取client对象，OpenAI类对象
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    # base_url=os.getenv("OPENAI_BASE_URL")
-    base_url=os.getenv("LOCAL_BASE_URL")
+    api_key=get_env("OPENAI_API_KEY"),
+    # base_url=get_env("OPENAI_BASE_URL")
+    base_url=get_env("LOCAL_BASE_URL")
 )
 
 examples_data = {  # 示例数据

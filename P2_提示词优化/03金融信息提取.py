@@ -1,21 +1,18 @@
 # -*- coding: UTF-8 -*-
 """
 @Project ：PycharmProjects 
-@File    ：金融信息提取.py
+@File    ：03金融信息提取.py
 @Author  ：九成八
 @Date    ：2026/3/6 23:39 
 """
 from openai import OpenAI
 import json
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
+from load_env import get_env
 
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    # base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    base_url="http://localhost:11434/v1"
+    api_key=get_env("OPENAI_API_KEY"),
+    # base_url=get_env("OPENAI_BASE_URL")
+    base_url=get_env("LOCAL_BASE_URL")
 )
 
 schema = ['日期', '股票名称', '开盘价', '收盘价', '成交量']
