@@ -6,7 +6,7 @@
 @Date    ：2026/3/6 23:48 
 """
 from openai import OpenAI
-from load_env import get_env
+from AI大模型RAG与智能体开发.P4_RAG项目案例.load_env import get_env
 
 client = OpenAI(
     api_key=get_env("OPENAI_API_KEY"),

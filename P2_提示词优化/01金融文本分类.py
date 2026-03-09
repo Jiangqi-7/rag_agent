@@ -7,7 +7,7 @@
 """
 
 from openai import OpenAI
-from load_env import get_env
+from AI大模型RAG与智能体开发.P4_RAG项目案例.load_env import get_env
 
 
 # 1. 获取client对象，OpenAI类对象
